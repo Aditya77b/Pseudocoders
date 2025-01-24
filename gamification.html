@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamification - RecycleRight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            bounce: 'bounce 1.5s infinite',
+            pulse: 'pulse 2s infinite',
+          },
+          keyframes: {
+            bounce: {
+              '0%, 100%': { transform: 'translateY(-10%)' },
+              '50%': { transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-gray-100 font-sans">
+  
+  <!-- Header -->
+  <header class="bg-gray-900 bg-opacity-80 sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4 py-4">
+      <a href = "index.html"><h1 class="text-4xl font-bold text-green-400 hover:animate-pulse">RecycleRight</h1></a>
+      <nav>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="#leaderboard" class="hover:text-green-400 transition">Leaderboard</a></li>
+          <li><a href="#badges" class="hover:text-green-400 transition">Badges</a></li>
+          <li><a href="#stats" class="hover:text-green-400 transition">Stats</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Gamification Hero Section -->
+  <section class="bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-5xl font-bold mb-6 animate-bounce">Earn Points and Unlock Badges!</h2>
+      <p class="text-lg mb-8">Compete in challenges, earn rewards, and improve your recycling habits.</p>
+      <a href="#leaderboard" class="bg-white text-green-500 py-3 px-8 rounded-full text-lg shadow-lg hover:scale-110 hover:shadow-2xl transform transition-all duration-300">
+        View Leaderboard
+      </a>
+    </div>
+  </section>
+
+  <!-- Leaderboard Section -->
+  <section id="leaderboard" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-green-400 mb-10">Top Recyclers</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Leaderboard Card 1 -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-green-400">Alice Green</h3>
+          <p class="text-gray-400">Points: 1200</p>
+        </div>
+        <!-- Leaderboard Card 2 -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-green-400">Bob Blue</h3>
+          <p class="text-gray-400">Points: 1100</p>
+        </div>
+        <!-- Leaderboard Card 3 -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-green-400">Cathy Yellow</h3>
+          <p class="text-gray-400">Points: 1000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Badges Section -->
+  <section id="badges" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-green-400 mb-10">Earn Badges</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Badge 1 -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <div class="text-green-400 mb-4">
+            <svg class="h-12 w-12 mx-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.69 2 6 4.69 6 8C6 11.31 8.69 14 12 14C15.31 14 18 11.31 18 8C18 4.69 15.31 2 12 2zM12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12zM5 20C5 17.33 8.67 16 12 16C15.33 16 19 17.33 19 20V22H5V20z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Plastic Pro</h3>
+          <p class="text-gray-400">Earn this badge after recycling 500 plastic items.</p>
+        </div>
+        <!-- Badge 2 -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <div class="text-green-400 mb-4">
+            <svg class="h-12 w-12 mx-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.69 2 6 4.69 6 8C6 11.31 8.69 14 12 14C15.31 14 18 11.31 18 8C18 4.69 15.31 2 12 2zM12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12zM5 20C5 17.33 8.67 16 12 16C15.33 16 19 17.33 19 20V22H5V20z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Eco Warrior</h3>
+          <p class="text-gray-400">Earn this badge after completing 10 recycling challenges.</p>
+        </div>
+        <!-- Badge 3 -->
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <div class="text-green-400 mb-4">
+            <svg class="h-12 w-12 mx-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.69 2 6 4.69 6 8C6 11.31 8.69 14 12 14C15.31 14 18 11.31 18 8C18 4.69 15.31 2 12 2zM12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12zM5 20C5 17.33 8.67 16 12 16C15.33 16 19 17.33 19 20V22H5V20z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Recycling Master</h3>
+          <p class="text-gray-400">Earn this badge after reducing your carbon footprint by 30%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-green-400 mb-10">Your Recycling Stats</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 bg-gray-900 rounded-lg shadow-md">
+          <h3 class="text-5xl font-bold text-green-500">1500</h3>
+          <p class="text-gray-300 mt-2">Total Points Earned</p>
+        </div>
+        <div class="p-6 bg-gray-900 rounded-lg shadow-md">
+          <h3 class="text-5xl font-bold text-green-500">30%</h3>
+          <p class="text-gray-300 mt-2">Your Recycling Impact</p>
+        </div>
+        <div class="p-6 bg-gray-900 rounded-lg shadow-md">
+          <h3 class="text-5xl font-bold text-green-500">10</h3>
+          <p class="text-gray-300 mt-2">Badges Unlocked</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center">
+    <p class="text-gray-400">© 2025 RecycleRight. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

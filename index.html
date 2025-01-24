@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecycleRight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            bounce: 'bounce 1.5s infinite',
+            pulse: 'pulse 2s infinite',
+          },
+          keyframes: {
+            bounce: {
+              '0%, 100%': { transform: 'translateY(-10%)' },
+              '50%': { transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-gray-900 bg-opacity-80 sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4 py-4">
+      <h1 class="text-4xl font-bold text-green-400 hover:animate-pulse">RecycleRight</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="#features" class="hover:text-green-400 transition">Features</a></li>
+          <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
+          <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 text-white py-20">
+    <div class="container mx-auto text-center px-6">
+      <h2 class="text-5xl font-bold mb-6 animate-bounce">Reduce Plastic Waste with RecycleRight</h2>
+      <p class="text-lg mb-8">Identify plastics, learn proper recycling methods, and connect with local recycling centers.</p>
+      <a href="#upload" class="bg-white text-green-500 py-3 px-8 rounded-full text-lg shadow-lg hover:scale-110 hover:shadow-2xl transform transition-all duration-300">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-green-400 mb-10">Our Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Feature 1 -->
+        <div class="bg-gray-800 hover:bg-gray-700 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <div class="text-green-400 mb-4">
+            <svg class="h-12 w-12 mx-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.69 2 6 4.69 6 8C6 11.31 8.69 14 12 14C15.31 14 18 11.31 18 8C18 4.69 15.31 2 12 2zM12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12zM5 20C5 17.33 8.67 16 12 16C15.33 16 19 17.33 19 20V22H5V20z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Image Recognition</h3>
+          <p class="text-gray-400">Upload photos to identify the type of plastic and recyclability instantly.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-gray-800 hover:bg-gray-700 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <div class="text-green-400 mb-4">
+            <svg class="h-12 w-12 mx-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.69 2 6 4.69 6 8C6 11.31 8.69 14 12 14C15.31 14 18 11.31 18 8C18 4.69 15.31 2 12 2zM12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12zM5 20C5 17.33 8.67 16 12 16C15.33 16 19 17.33 19 20V22H5V20z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Local Recycling Centers</h3>
+          <p class="text-gray-400">Find local centers with detailed information.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-gray-800 hover:bg-gray-700 p-8 rounded-lg shadow-md transform hover:scale-105 transition-all duration-300">
+          <div class="text-green-400 mb-4">
+            <svg class="h-12 w-12 mx-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.69 2 6 4.69 6 8C6 11.31 8.69 14 12 14C15.31 14 18 11.31 18 8C18 4.69 15.31 2 12 2zM12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12zM5 20C5 17.33 8.67 16 12 16C15.33 16 19 17.33 19 20V22H5V20z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-2">Gamification</h3>
+          <p class="text-gray-400">Earn points, unlock badges, and compete to improve recycling habits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload Section -->
+  <section id="upload" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-green-400 mb-10">Identify Your Plastic</h2>
+      <form class="max-w-2xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <label for="file-upload" class="block text-lg font-medium text-gray-200 mb-4">Upload an Image:</label>
+        <input id="file-upload" type="file" class="w-full text-gray-300 py-2 px-4 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 mb-6" />
+        <button type="submit" class="bg-green-500 text-white py-3 px-8 rounded-lg shadow-lg hover:scale-110 transform transition-all duration-300">
+          Identify
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-green-400 mb-10">Recycling Statistics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 bg-gray-900 rounded-lg shadow-md">
+          <h3 class="text-5xl font-bold text-green-500">9%</h3>
+          <p class="text-gray-300 mt-2">Global plastic recycled (2019)</p>
+        </div>
+        <div class="p-6 bg-gray-900 rounded-lg shadow-md">
+          <h3 class="text-5xl font-bold text-green-500">$44.88B</h3>
+          <p class="text-gray-300 mt-2">Plastic recycling market size (2024)</p>
+        </div>
+        <div class="p-6 bg-gray-900 rounded-lg shadow-md">
+          <h3 class="text-5xl font-bold text-green-500">+5.2%</h3>
+          <p class="text-gray-300 mt-2">Expected growth rate (2024-2025)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gradient-to-r from-green-400 to-blue-500 text-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-10">Get in Touch</h2>
+      <form class="max-w-2xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-lg font-medium text-gray-200 mb-2">Name:</label>
+          <input id="name" type="text" class="w-full py-2 px-4 bg-gray-700 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-lg font-medium text-gray-200 mb-2">Email:</label>
+          <input id="email" type="email" class="w-full py-2 px-4 bg-gray-700 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400" />
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block text-lg font-medium text-gray-200 mb-2">Message:</label>
+          <textarea id="message" rows="4" class="w-full py-2 px-4 bg-gray-700 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+        </div>
+        <button type="submit" class="bg-green-500 text-white py-3 px-8 rounded-lg shadow-lg hover:scale-110 transform transition-all duration-300">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center">
+    <p class="text-gray-400">© 2025 RecycleRight. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
